@@ -52,6 +52,7 @@ def main(local_rank, args):
         world_size = 1
     
     writer = None
+    os.makedirs(args.work_dir, exist_ok=True)
     timestamp = time.strftime('%Y%m%d_%H%M%S', time.localtime())
     log_file = osp.join(args.work_dir, f'{timestamp}.log')
     logger = MMLogger('selfocc', log_file=log_file)

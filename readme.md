@@ -114,7 +114,7 @@ We provide the following checkpoints trained on the SurroundOcc dataset:
 
 
 ```
-python eval.py --py-config config/xxxx.py --work-dir out/xxxx/ --resume-from out/xxxx/state_dict.pth
+python eval.py --py-config config/prob/nuscenes_gs12800.py --work-dir out/ --resume-from ckpts/prob_128_miou_20_08.pth
 ```
 
 ### Train
@@ -129,7 +129,7 @@ Stay tuned for more exciting work and models!🤗
 ### Visualize
 Install packages for visualization according to the [documentation](docs/installation.md). Here is an example command where you can change --num-samples and --vis-index.
 ```bash
-CUDA_VISIBLE_DEVICES=0 python visualize.py --py-config config/nuscenes_gs25600_solid.py --work-dir out/nuscenes_gs25600_solid --resume-from out/nuscenes_gs25600_solid/state_dict.pth --vis-occ --vis-gaussian --num-samples 3 --model-type base
+CUDA_VISIBLE_DEVICES=0 python visualize.py --py-config config/prob/nuscenes_gs12800.py --work-dir out/nuscenes_gs128 --resume-from ckpts/prob_128_miou_20_08.pth --vis-occ --vis-gaussian --num-samples 3 --model-type prob
 ```
 
 ## Related Projects
